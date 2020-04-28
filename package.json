@@ -1,0 +1,24 @@
+{
+  "name": "pricefinder-ecommerce",
+  "version": "0.1.0",
+  "description": "Pricefinder module gets product prices from Flipkart and Amazon.in",
+  "main": "index.js",
+  "keywords": [
+    "amazon",
+    "flipkart",
+    "ecommerce",
+    "price"
+  ],
+  "repository": {
+    "url": "https://github.com/abinj30/pricefinder-ecommerce"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": "Abin Joseph",
+  "license": "MIT"
+}
