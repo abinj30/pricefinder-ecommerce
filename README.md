@@ -1,5 +1,4 @@
 # pricefinder
-![Node.js Package](https://github.com/abinj30/pricefinder/workflows/Node.js%20Package/badge.svg)
 
 Node module to fetch price of Flipkart/Amazon product given their URL
 
