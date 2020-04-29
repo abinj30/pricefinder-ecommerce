@@ -9,7 +9,7 @@ function parseName($) {
 function parseAvailability($) {
    //parses the availability status from DOM
    let selectedText = $(config.availabilitySelector).text();
-   return !selectedText.includes(config.notAvailableStr);
+   return !(selectedText.includes(config.notAvailableStr));
 }
 
 function parsePrice($) {
@@ -30,24 +30,17 @@ function getProductCode(url) {
    }
    const match = matchedPattern[0];
    return match.slice(match.length - config.productCodeLength);
-   
 }
 
 function getProduct($, url) {
    //get the product details from DOM
-   const product = {
-      productCode: null,
-      name: null,
-      price: null,
-      available: null,
+   return {
+      productCode: getProductCode(url),
+      name: parseName($),
+      price: parsePrice($),
+      available: parseAvailability($),
       url
    };
-   product.price = parsePrice($);
-   product.name = parseName($);
-   product.available = parseAvailability($);
-   product.productCode = getProductCode(url);
-
-   return product;
 }
 
 function matchUrlPattern(url) {
