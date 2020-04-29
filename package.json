@@ -18,8 +18,9 @@
     "request-promise": "^4.2.4"
   },
   "devDependencies": {
-    "mocha": "^7.1.2",
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^7.1.2"
   },
   "scripts": {
     "test": "mocha"
