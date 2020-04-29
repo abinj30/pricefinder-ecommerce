@@ -15,7 +15,7 @@ function parseAvailability($) {
 function parsePrice($) {
    //parses the price from DOM
    for (let selector of config.priceSelectors) {
-      var selectedText = $(config.selector).text();
+      var selectedText = $(selector).text();
       if (selectedText) break;
    }
    let priceString = selectedText.replace(config.priceReplRegex, "");
@@ -61,7 +61,7 @@ function matchUrlPattern(url) {
 
 function isValidUrl(url) {
    //validate the url
-   return !(matchUrlPattern(url) === null);
+   return matchUrlPattern(url) !== null;
 }
 
 function init(args){
