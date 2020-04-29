@@ -60,10 +60,12 @@ function matchUrlPattern(url) {
 }
 
 function isValidUrl(url) {
+   //validate the url
    return !(matchUrlPattern(url) === null);
 }
 
 function init(args){
+   //initialize the config object with values
    config = args;
 }
 
