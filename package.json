@@ -17,8 +17,13 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
-  "devDependencies": {},
-  "scripts": {},
+  "devDependencies": {
+    "mocha": "^7.1.2",
+    "chai": "^4.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
   "author": "Abin Joseph",
   "license": "MIT"
 }
