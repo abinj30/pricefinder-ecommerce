@@ -16,13 +16,8 @@ async function getPage(url) {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
    };
 
-   let params = {url, gzip:true, headers}
-   try {
-      return await request(params);
-   } catch (error) {
-      console.error(error.message);
-      throw new Error("Url download failed");
-   }
+   let params = {url, gzip:true, headers};
+   return await request(params);
 }
 
 async function getProduct(url, website) {

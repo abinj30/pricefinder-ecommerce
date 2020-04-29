@@ -1,6 +1,6 @@
 {
   "name": "pricefinder-ecommerce",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Pricefinder module gets product prices from Flipkart and Amazon.in",
   "main": "index.js",
   "keywords": [
@@ -17,8 +17,13 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
-  "devDependencies": {},
-  "scripts": {},
+  "devDependencies": {
+    "mocha": "^7.1.2",
+    "chai": "^4.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
   "author": "Abin Joseph",
   "license": "MIT"
 }

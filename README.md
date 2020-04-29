@@ -1,5 +1,8 @@
 # pricefinder
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2653fbb7dedb47d9892fc90598f17a4c)](https://app.codacy.com/manual/abinj30/pricefinder-ecommerce?utm_source=github.com&utm_medium=referral&utm_content=abinj30/pricefinder-ecommerce&utm_campaign=Badge_Grade_Dashboard)
+![Node.js CI](https://github.com/abinj30/pricefinder-ecommerce/workflows/Node.js%20CI/badge.svg?branch=master)
+
 Node module to fetch price of Flipkart/Amazon product given their URL
 
 ## Usage
