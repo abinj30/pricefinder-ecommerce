@@ -16,7 +16,7 @@ function parsePrice($) {
    //parses the price from DOM
    for (let selector of config.priceSelectors) {
       var selectedText = $(selector).text();
-      if (selectedText) break;
+      if (selectedText) { break; }
    }
    let priceString = selectedText.replace(config.priceReplRegex, "");
    return parseFloat(priceString);
@@ -41,7 +41,7 @@ function getProduct($, url) {
       price: null,
       available: null,
       url
-   }
+   };
    product.price = parsePrice($);
    product.name = parseName($);
    product.available = parseAvailability($);
@@ -52,9 +52,10 @@ function getProduct($, url) {
 
 function matchUrlPattern(url) {
    //matches with any of the product urls
+   let match = null;
    for (let pattern of config.urlPatterns) {
       match = url.match(pattern);
-      if (match) break;
+      if (match) { break; }
    }
    return match;
 }
@@ -69,4 +70,4 @@ function init(args){
    config = args;
 }
 
-module.exports = {getProduct, isValidUrl, init}
+module.exports = {getProduct, isValidUrl, init};
