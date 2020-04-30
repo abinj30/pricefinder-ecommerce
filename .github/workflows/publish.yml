@@ -1,0 +1,28 @@
+# This workflow will do a clean install of node dependencies, build the source code, run tests and publish to package to npmjs.com.
+
+name: Publish
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+    - name: Publish
+      if: github.ref == 'refs/heads/master'
+      uses: mikeal/merge-release@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
