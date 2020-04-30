@@ -1,4 +1,5 @@
-const request = require("request-promise");
+const bent = require("bent");
+const getBody = bent("string");
 const cheerio = require("cheerio");
 const config = require("./config");
 const scraper = require("./scraper");
@@ -16,8 +17,7 @@ async function getPage(url) {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
    };
 
-   let params = {url, gzip:true, headers};
-   return await request(params);
+   return await getBody(url, null ,headers);
 }
 
 async function getProduct(url, website) {
