@@ -12,7 +12,8 @@ module.exports = {
       urlPatterns: [
          /http[s]*:[\/]{2}www\.amazon\.in\/gp\/product\/.{10}/i,
          /http[s]*:[\/]{2}www\.amazon\.in\/dp\/.{10}/i,
-         /http[s]*:[\/]{2}www\.amazon\.in\/.*\/dp\/.{10}/i
+         /http[s]*:[\/]{2}www\.amazon\.in\/.*\/dp\/.{10}/i,
+         /http[s]*:[\/]{2}www\.amazon\.de\/dp\/.{10}/i,
       ],
       productCodeLength: 10,
       priceReplRegex: /₹| |,/gi,
