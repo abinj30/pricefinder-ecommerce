@@ -17,15 +17,15 @@ module.exports = {
       ],
       productCodeLength: 10,
       priceReplRegex: /₹| |,/gi,
-      priceSelectors: ["#priceblock_ourprice", "#priceblock_dealprice", "#priceblock_saleprice"],
+      priceSelectors: [
+         "#priceblock_ourprice", 
+         "#priceblock_dealprice", 
+         "#priceblock_saleprice", 
+         "#soldByThirdParty", 
+         "#kindle-price"
+      ],
       nameSelector: "#productTitle",
       availabilitySelector: "#availability",
       notAvailableStr: "Currently unavailable"
    }
 }
-
-
-
-
-
-
